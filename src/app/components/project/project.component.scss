@@ -1,0 +1,43 @@
+.card-container {
+    height: 350px;
+    margin: 25px 0;
+
+    .front, .back {
+        height: 350px;
+        -webkit-box-shadow: 3px 3px 2px 2px rgba(0,0,0,.3);
+        box-shadow: 3px 3px 2px 2px rgba(0,0,0,.3);
+    }
+}
+
+.card .cover {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4dcef2+0,1d35d3+100 */
+    background: rgb(77,206,242); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(77,206,242,1) 0%, rgba(29,53,211,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(77,206,242,1) 0%,rgba(29,53,211,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  rgba(77,206,242,1) 0%,rgba(29,53,211,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dcef2', endColorstr='#1d35d3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+// .card .cover img {
+//     width: 200%;
+//     margin-left: -50%;
+// }
+
+.card .content .main {
+    min-height: 105px;
+}
+
+.card .back .content .main {
+    height: 142px;
+}
+
+.card .user {
+    height: 100px;
+    width: 100px;
+}
+
+.card .user img {
+    width: 110%;
+    margin: -5%;
+}
+

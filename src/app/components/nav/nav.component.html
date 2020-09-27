@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<nav class="navbar fixed-bottom navbar-expand-sm" id="menu">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <a class="navbar-brand" href="#home">HUGO</a>
+        
+        <div class="collapse navbar-collapse" id="nav-content" (click)="hideNav()">   
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#home">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#about" target="_self">A Propos</a>
+                <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+                <div>
+                    <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#contactModal">
+                        Me contacter
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+            ...
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
