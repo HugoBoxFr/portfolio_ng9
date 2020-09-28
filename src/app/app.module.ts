@@ -12,7 +12,11 @@ import { HomeComponent } from './components/home/home.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ProjectComponent } from './components/project/project.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormationsComponent } from './components/formations/formations.component';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component'; 
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     HomeComponent,
     PortfolioComponent,
-    ProjectComponent
+    ProjectComponent,
+    FormationsComponent,
+    ExperiencesComponent,
+    SkillsComponent,
+    SoftSkillsComponent
   ],
   imports: [
     BrowserModule,

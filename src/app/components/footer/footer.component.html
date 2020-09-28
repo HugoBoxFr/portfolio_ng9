@@ -1,6 +1,6 @@
 <footer id="footer">
     <div class="container">
-        <p>Hugo Prea - &copy; {{ year }} - Handmade with Angular 9</p>
+        <p>Hugo Prea - &copy; {{ year }} <span [style.display]="hide === true ? 'inline-block' : 'none'">- Handmade with Angular 9</span></p>
         <ul>
             <li *ngFor="let social of socialLinks">
                 <a href="{{ social.link }}" target="_blank" title="{{ social.name }}"><i class="fab fa-{{ social.logo }}"></i></a>

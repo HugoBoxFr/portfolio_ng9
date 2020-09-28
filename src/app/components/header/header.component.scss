@@ -1,6 +1,6 @@
 header {
     height: 100vh;
-    padding-bottom: 150px;
+    padding-bottom: 200px;
     background-image: url('../../../assets/img/header_bg.jpg');
     background-size: cover;
     background-attachment: fixed;
@@ -12,7 +12,6 @@ header {
 
 header .container {
     display: flex;
-    flex-direction: column;
 
     h1, h2 {
         font-weight: 200;
@@ -31,6 +30,63 @@ header .container {
     .typed-element {
         font-family: 'Poppins', sans-serif;
     }
+
+    img {
+        margin-right: 15px;
+    }
+}
+
+/* ----------------------- scroll btn -------------------- */
+
+#scroll {
+	position:absolute;
+    z-index: 1100;
+    right: 30px;
+	bottom: 10px;
+}
+
+#scroll:hover {
+    text-decoration: none;
+}
+
+#scroll_btn {
+    border: 1px solid #007bff;
+	border-radius: 13px;
+	-webkit-box-shadow: 0 0 6px 3px #426084;
+	-moz-box-shadow: 0 0 6px 3px #426084;
+ 	box-shadow: 0 0 4px #426084;
+	margin: 0px auto;
+	width: 30px;
+    height: 45px;
+    text-align: center;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+#scroll_btn:hover {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+#scroll_btn i {
+	font-weight: bold;
+	color:#426084;
+	display: block;
+	-webkit-animation: scrollin 3s infinite;
+	-moz-animation: scrollin 3s infinite;
+	animation: scrollin 3s infinite;
+}
+
+@keyframes scrollin {
+	0%{line-height: 70px;}
+	100%{line-height: 20px;}
+}
+
+#scroll_btn i {
+    font-size: 20px;
+	color: #007bff;
 }
 
 
@@ -50,12 +106,18 @@ header .container {
     }
 }
 
+@media screen and (max-width: 650px) {
+    #scroll {
+        bottom: 75px
+    }
+}
+
 @media screen and (max-width: 500px) {
     header .container h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     header .container h2 {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 }

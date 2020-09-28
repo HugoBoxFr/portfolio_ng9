@@ -19,7 +19,7 @@ export class PortfolioComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     margin: 15,
-    dots: false,
+    dots: true,
     navSpeed: 700,
     navText: ['<', '>'],
     responsive: {

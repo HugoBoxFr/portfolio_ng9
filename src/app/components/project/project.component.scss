@@ -4,9 +4,13 @@
 
     .front, .back {
         height: 350px;
-        -webkit-box-shadow: 3px 3px 2px 2px rgba(0,0,0,.3);
-        box-shadow: 3px 3px 2px 2px rgba(0,0,0,.3);
+        -webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+        box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
     }
+}
+
+.card {
+    border: none;
 }
 
 .card .cover {
@@ -17,11 +21,6 @@
     background: radial-gradient(ellipse at center,  rgba(77,206,242,1) 0%,rgba(29,53,211,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4dcef2', endColorstr='#1d35d3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-
-// .card .cover img {
-//     width: 200%;
-//     margin-left: -50%;
-// }
 
 .card .content .main {
     min-height: 105px;
@@ -34,10 +33,22 @@
 .card .user {
     height: 100px;
     width: 100px;
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card .user img {
     width: 110%;
     margin: -5%;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer button {
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
 }
 

@@ -1,13 +1,8 @@
 <div id="portfolio">
-    <!-- <div class="col-md-3" *ngFor="let project of projects">
-        <app-project [project]="project"></app-project>
-    </div> -->
-
-
-    <div>Some tags before</div>
+    <!-- <div>Some tags before</div> -->
       <owl-carousel-o [options]="customOptions">
         <ng-template carouselSlide *ngFor="let project of projects"><app-project [project]="project"></app-project></ng-template>  
       </owl-carousel-o>
-    <div>Some tags after</div>
+    <!-- <div>Some tags after</div> -->
 </div>
 

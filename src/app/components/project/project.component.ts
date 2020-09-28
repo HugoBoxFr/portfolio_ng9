@@ -13,9 +13,4 @@ export class ProjectComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  moreInfo() {
-    
-  }
-
 }
