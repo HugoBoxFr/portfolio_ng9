@@ -57,3 +57,9 @@ footer.sticky {
         font-size: .8rem;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .ng-footer-txt {
+        display: none;
+    }
+}

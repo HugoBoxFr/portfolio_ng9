@@ -14,7 +14,6 @@ window.addEventListener("scroll", function() {
 
 export class FooterComponent implements OnInit {
   year: number;
-  hide: boolean = true;
 
   socialLinks = [
     { name: "Github", link: "", logo: "github" },
@@ -26,9 +25,5 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     this.year = new Date().getFullYear();
-
-    if (window.innerWidth < 500) {
-      this.hide = false;
-    }
   }
 }

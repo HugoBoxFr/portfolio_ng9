@@ -18,7 +18,9 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { SkillsComponent } from './components/skills/skills.component';
 import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
-import { ActivitiesComponent } from './components/activities/activities.component'; 
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { ResumeComponent } from './components/resume/resume.component';
+import { QuoteComponent } from './components/quote/quote.component'; 
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ActivitiesComponent } from './components/activities/activities.componen
     SkillsComponent,
     SoftSkillsComponent,
     TestimonialsComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    ResumeComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

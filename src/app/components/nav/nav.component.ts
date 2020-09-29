@@ -26,8 +26,8 @@ window.addEventListener("scroll", function() {
 $(document).ready(function() {
   $(window).scroll(function() {
     const scrollPosition = $(window).scrollTop();
-    const one = $("#home").offset().top, two = $("#about").offset().top - 70, three = $("#portfolio").offset().top - 70;
-    const nav1 = $("#nav1"), nav2 = $("#nav2"), nav3 = $("#nav3");
+    const one = $("#home").offset().top, two = $("#about").offset().top - 70, three = $("#resume").offset().top - 70, four = $("#portfolio").offset().top - 70;
+    const nav1 = $("#nav1"), nav2 = $("#nav2"), nav3 = $("#nav3"), nav4 = $("#nav4");
 
     if (scrollPosition >= one) {
       nav1.siblings().removeClass("active");
@@ -40,6 +40,10 @@ $(document).ready(function() {
     if (scrollPosition >= three) {
       nav3.siblings().removeClass("active");
       nav3.addClass("active");
+    }
+    if (scrollPosition >= four) {
+      nav4.siblings().removeClass("active");
+      nav4.addClass("active");
     }
   })
 });

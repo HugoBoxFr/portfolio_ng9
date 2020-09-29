@@ -10,6 +10,10 @@ nav {
     width: 25px;
 }
 
+.navbar-nav {
+    align-items: center;
+}
+
 nav a, .navbar-nav a {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
@@ -41,7 +45,6 @@ nav.sticky {
 .btn-modal {
     color: white;
     border-radius: 5rem;
-    // border: 2px solid #007bff;
     border-color: #007bff;
     padding: 0.5rem 1.6rem;
     background-color: transparent;
@@ -60,10 +63,11 @@ nav.sticky {
 .navbar-nav a.active, .navbar-nav a:hover {
     color: #007bff;
     position: relative;
+}
 
-    // -webkit-text-shadow: 0 0 6px 3px #426084;
-	// -moz-text-shadow: 0 0 6px 3px #426084;
- 	// text-shadow: 0 0 4px #426084;
+.navbar-toggler:focus {
+    outline: 1px solid #007bff;
+    box-shadow: 0 0 10px #ffffff;
 }
 
 @media screen and (max-width: 800px) {
