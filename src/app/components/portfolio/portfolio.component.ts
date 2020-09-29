@@ -37,7 +37,7 @@ export class PortfolioComponent implements OnInit {
       }
     },
     nav: true
-  }
+  };
 
   constructor(
     private projectService: ProjectService

@@ -16,7 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormationsComponent } from './components/formations/formations.component';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component'; 
+import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { ActivitiesComponent } from './components/activities/activities.component'; 
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { SoftSkillsComponent } from './components/soft-skills/soft-skills.compon
     FormationsComponent,
     ExperiencesComponent,
     SkillsComponent,
-    SoftSkillsComponent
+    SoftSkillsComponent,
+    TestimonialsComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,

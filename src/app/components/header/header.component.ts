@@ -9,7 +9,7 @@ import Typed from 'typed.js';
 export class HeaderComponent implements OnInit {
   
   options = {
-    strings: ['Hugo Prea,', 'Développeur Web,', 'Infographiste,', "disponible."],
+    strings: ['Hugo Prea', 'Développeur Web', 'Infographiste', "disponible."],
     typeSpeed: 100,
     backSpeed: 100,
     showCursor: true,

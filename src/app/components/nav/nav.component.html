@@ -7,16 +7,17 @@
         </button>
         
         <a class="navbar-brand" href="#home">
-            <img src="../../../assets/img/logo.svg" alt="logo hugo prea" />
+            <img src="../../../assets/img/logo_color.svg" alt="logo hugo prea" />
+            hugo
         </a>
         
         <div class="collapse navbar-collapse" id="nav-content" (click)="hideNav()">   
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#home">Accueil <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#about" target="_self">A Propos</a>
-                <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+                <a class="nav-item nav-link active" href="#home" id="nav1">Accueil<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#about" target="_self" id="nav2">A Propos</a>
+                <a class="nav-item nav-link" href="#portfolio" id="nav3">Portfolio</a>
                 <div>
-                    <button type="button" class="btn btn-primary btn-modal" data-toggle="modal" data-target="#contactModal">
+                    <button type="button" class="btn-modal" data-toggle="modal" data-target="#contactModal">
                         Me contacter
                     </button>
                 </div>

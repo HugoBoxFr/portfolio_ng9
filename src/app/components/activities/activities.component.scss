@@ -1,0 +1,24 @@
+#activities {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity {
+    width: 140px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0 10px;
+
+    img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    p { 
+        margin-bottom: 0;
+    }
+}

@@ -7,6 +7,8 @@ import { Project } from '../models/project';
 export class ProjectService {
   private projects: Project[];
 
+
+  // add portfolio
   constructor() { 
     this.projects = [
       new Project(1, "Saint Seiya", "The Memory Game", ["ReactJs", "Javascript"], "saint_seiya.jpg", "Projet perso", true, "https://hugoboxfr.github.io/react_memory_game/"),
@@ -25,6 +27,4 @@ export class ProjectService {
   getProjects(): Project[] {
     return this.projects;
   };
-
-
 }

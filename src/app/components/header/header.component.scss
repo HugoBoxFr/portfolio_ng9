@@ -8,6 +8,11 @@ header {
     display: flex;
     align-items: flex-end;
     color: white;
+
+    .home-content {
+        display: flex;
+        align-items: center;
+    }
 }
 
 header .container {
@@ -29,6 +34,10 @@ header .container {
 
     .typed-element {
         font-family: 'Poppins', sans-serif;
+        color: #007bff;
+        // -webkit-text-shadow: 0 0 6px 3px #426084;
+        // -moz-text-shadow: 0 0 6px 3px #426084;
+        // text-shadow: 0 0 4px #426084;
     }
 
     img {
@@ -114,10 +123,28 @@ header .container {
 
 @media screen and (max-width: 500px) {
     header .container h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 
     header .container h2 {
         font-size: 1.2rem;
+    }
+
+    header .container img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header .container h1 {
+        font-size: 1.2rem;
+    }
+
+    header .container h2 {
+        font-size: 1rem;
+    }
+
+    header .container img {
+        margin-right: 10px;
     }
 }
