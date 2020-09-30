@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Resume } from 'src/app/models/resume';
+import { ResumeService } from 'src/app/services/resume.service';
 
 @Component({
   selector: 'app-experiences',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./experiences.component.scss']
 })
 export class ExperiencesComponent implements OnInit {
+  xps: Resume[];
 
-  constructor() { }
+  constructor(
+    private resumeService: ResumeService
+  ) { }
 
   ngOnInit(): void {
+    this.xps = this.resumeService.getXps();
   }
 
 }

@@ -2,15 +2,27 @@
     background-color: rgb(39, 38, 38);
 }
 
-.activity {
-    background-image: url('../assets/img/bg_activities.jpg');
+.activity-section, .skill-section, .project-section {
+    background-color: rgb(65, 65, 65);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
-.activity:before {
+.activity-section {
+    background-image: url('../assets/img/bg_activities.jpg');
+}
+
+.skill-section {
+    background-image: url('../assets/img/techno_bg.jpg');
+}
+
+.project-section {
+    background-image: url('../assets/img/project_bg.jpg');
+}
+
+.activity-section:before, .skill-section:before, .project-section:before {
     background-color: #303030;
     opacity: 0.6;
     content: ' ';

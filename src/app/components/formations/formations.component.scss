@@ -1,3 +1,87 @@
 #formation {
-    
+    h4 {
+        font-family: "Poppins", sans-serif;
+        font-size: 25px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: #007bff;
+    }
+
+    .fa {
+        color: #343a40;
+    }
+
+    .formation {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 0;
+    }
+
+    .formation-period {
+        width: 70px;
+        text-align: center;
+        margin-right: 15px;
+        padding: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+
+        .formation-date {
+            height: 40px;
+            line-height: 15px;
+            color: white;
+            background-color: #343a40;
+            border: 2px solid #007bff;
+            border-radius: 20px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sep-line {
+            height: 90%;
+            position: absolute;
+            z-index: 1;
+            left: calc(50% - 1px);
+            border-right: 2px dashed #007bff;
+        }
+    }
+
+    .formation-content {
+        width: 80%;
+        padding: 35px 0;
+
+        p, h5 {
+            margin-bottom: 0;
+        }
+
+        h5 {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        h6 {
+            font-weight: bold;
+        }
+
+        ul {
+            margin-bottom: 0;
+        }
+        
+        .techno_formation {
+            list-style: none;
+            padding-inline-start: 0;
+            font-size: 12px;
+            font-style: italic;
+            margin-top: 10px;
+        
+            li {
+                float: left;
+            }
+        }
+    }
 }
+    

@@ -7,7 +7,7 @@
         </button>
         
         <a class="navbar-brand" href="#home">
-            <img src="../../../assets/img/logo_color.svg" alt="logo hugo prea" />
+            <img src="../../../assets/img/logo_color.svg" alt="logo hugo prea" /> hugo
         </a>
         
         <div class="collapse navbar-collapse" id="nav-content" (click)="hideNav()">   
@@ -30,19 +30,24 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLongTitle">Envie de m'écrire ?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
             <div class="modal-body">
-            ...
+                <form>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required>
+
+                    <input type="mail" id="mail" name="mail" class="form-control" placeholder="Votre email" required>
+
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Votre message" required></textarea>
+                </form>
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="submit" class="btn-in-modal">Envoyer</button>
             </div>
         </div>
     </div>

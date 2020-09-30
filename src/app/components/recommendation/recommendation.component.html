@@ -1,0 +1,16 @@
+<div class="reco">
+    <div class="reco-title">
+        <div class="picture">
+            <img src="assets/img/{{ recommendation.picture }}" alt="{{ recommendation.name }}" />
+        </div>
+    </div>
+    
+    <div>
+        <h5>{{ recommendation.name }}</h5>
+        <p class="job">{{ recommendation.job }}</p>
+    </div>
+
+    <div>
+        <p class="sentence"><i class="fa fa-quote-left" aria-hidden="true"></i><span [innerHtml]="recommendation.sentence"></span><i class="fa fa-quote-right" aria-hidden="true"></i></p>
+    </div>
+</div>

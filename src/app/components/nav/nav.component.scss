@@ -36,18 +36,18 @@ nav.sticky {
     justify-content: flex-end;
 }
 
-.modal-content, .btn-modal {
+.modal-content, .btn-modal, .btn-in-modal {
     -webkit-box-shadow: 0 0 6px 3px #426084;
 	-moz-box-shadow: 0 0 6px 3px #426084;
  	box-shadow: 0 0 4px #426084;
 }
 
-.btn-modal {
+.btn-modal, .btn-in-modal {
     color: white;
-    border-radius: 5rem;
     border-color: #007bff;
-    padding: 0.5rem 1.6rem;
     background-color: transparent;
+    border-radius: 5rem;
+    padding: 0.5rem 1.6rem;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
     -ms-transition: all .2s ease;
@@ -56,8 +56,16 @@ nav.sticky {
     outline: none;
 }
 
-.btn-modal:hover {
+.btn-in-modal {
+    background-color: #007bff;
+}
+
+.btn-modal:hover, .btn-in-modal:hover {
     box-shadow: 0 0 10px #ffffff;
+}
+
+.btn-in-modal:hover {
+    background-color: #026ada;
 }
 
 .navbar-nav a.active, .navbar-nav a:hover {
@@ -68,6 +76,10 @@ nav.sticky {
 .navbar-toggler:focus {
     outline: 1px solid #007bff;
     box-shadow: 0 0 10px #ffffff;
+}
+
+#contactModal form input {
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width: 800px) {

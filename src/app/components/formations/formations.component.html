@@ -1,3 +1,28 @@
 <div id="formation">
-    formation
+    <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i> Formations</h4>
+    <div class="formations">
+        <div class="formation" *ngFor="let formation of formations">
+            <div class="formation-period">
+                <div *ngFor="let p of formation.period" class="formation-date">
+                    {{ p }}
+                </div>
+
+                <div class="sep-line"></div>
+            </div>
+
+            <div class="formation-content">
+                <h5>{{ formation.title }}</h5>
+                <h6>{{ formation.place }}</h6>
+                <p>{{ formation.work }}</p>
+                
+                <ul class="about_formation" *ngFor="let a of formation.about">
+                    <li>{{ a }}</li>
+                </ul>
+
+                <ul class="techno_formation" *ngFor="let t of formation.technos; let i = index">
+                    <li>{{ t }}<span *ngIf="i !== formation.technos.length - 1">&nbsp;|&nbsp;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

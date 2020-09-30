@@ -16,11 +16,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormationsComponent } from './components/formations/formations.component';
 import { ExperiencesComponent } from './components/experiences/experiences.component';
 import { SkillsComponent } from './components/skills/skills.component';
-import { SoftSkillsComponent } from './components/soft-skills/soft-skills.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { ResumeComponent } from './components/resume/resume.component';
-import { QuoteComponent } from './components/quote/quote.component'; 
+import { QuoteComponent } from './components/quote/quote.component';
+import { RecommendationComponent } from './components/recommendation/recommendation.component'; 
 
 @NgModule({
   declarations: [
@@ -36,11 +36,11 @@ import { QuoteComponent } from './components/quote/quote.component';
     FormationsComponent,
     ExperiencesComponent,
     SkillsComponent,
-    SoftSkillsComponent,
     TestimonialsComponent,
     ActivitiesComponent,
     ResumeComponent,
-    QuoteComponent
+    QuoteComponent,
+    RecommendationComponent
   ],
   imports: [
     BrowserModule,

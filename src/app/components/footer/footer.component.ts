@@ -16,9 +16,9 @@ export class FooterComponent implements OnInit {
   year: number;
 
   socialLinks = [
-    { name: "Github", link: "", logo: "github" },
-    { name: "LinkedIn", link: "", logo: "linkedin-in" },
-    { name: "Twitter", link: "", logo: "twitter" }
+    { name: "Github", link: "https://github.com/HugoBoxFr", logo: "github" },
+    { name: "LinkedIn", link: "https://www.linkedin.com/in/hugo-prea", logo: "linkedin-in" },
+    { name: "Twitter", link: "https://www.twitter.com/prea_hugo", logo: "twitter" }
   ];
 
   constructor() { }

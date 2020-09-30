@@ -1,3 +1,28 @@
 <div id="xp">
-    xp
+    <h4><i class="fa fa-briefcase" aria-hidden="true"></i> Expériences professionnelles</h4>
+    <div class="xps">
+        <div class="xp" *ngFor="let xp of xps">
+            <div class="xp-period">
+                <div *ngFor="let p of xp.period" class="xp-date">
+                    {{ p }}
+                </div>
+
+                <div class="sep-line"></div>
+            </div>
+
+            <div class="xp-content">
+                <h5>{{ xp.title }}</h5>
+                <h6>{{ xp.place }}</h6>
+                <p>{{ xp.work }}</p>
+                
+                <ul class="about_xp" *ngFor="let a of xp.about">
+                    <li>{{ a }}</li>
+                </ul>
+
+                <ul class="techno_xp" *ngFor="let t of xp.technos; let i = index">
+                    <li>{{ t }}<span *ngIf="i !== xp.technos.length - 1">&nbsp;|&nbsp;</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

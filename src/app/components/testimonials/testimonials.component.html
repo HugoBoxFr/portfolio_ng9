@@ -1,5 +1,8 @@
 <div id="testimonials">
-    testimonials
+    <div class="row">
+        <div class="col-md-6" *ngFor="let recommendation of recommendations">
+            <app-recommendation [recommendation]="recommendation"></app-recommendation>
+        </div>
+    </div>
     <br>
-    add button contact
 </div>

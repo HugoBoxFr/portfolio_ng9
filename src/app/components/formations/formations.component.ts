@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Resume } from 'src/app/models/resume';
+import { ResumeService } from 'src/app/services/resume.service';
 
 @Component({
   selector: 'app-formations',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./formations.component.scss']
 })
 export class FormationsComponent implements OnInit {
+  formations: Resume[];
 
-  constructor() { }
+  constructor(
+    private resumeService: ResumeService
+  ) { }
 
   ngOnInit(): void {
+    this.formations = this.resumeService.getEducation();
   }
 
 }
