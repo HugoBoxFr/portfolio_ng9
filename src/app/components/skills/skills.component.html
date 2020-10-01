@@ -1,14 +1,14 @@
 <div id="skills">
-        <owl-carousel-o [options]="skillsOptions">
-            <ng-template carouselSlide *ngFor="let skill of skills">
-                <div class="skill">
-                    <img src="../../../assets/img/{{ skill.img }}" />
-                    <h5>{{ skill.name }}</h5>
-                    <div class="rate">
-                        <i class="fa fa-star skill-rate" aria-hidden="true" *ngFor="let star of Arr(skill.rate).fill(1)"></i>
-                        <i class="fa fa-star" aria-hidden="true" *ngFor="let star of Arr(5-skill.rate).fill(1)"></i>
-                    </div>
+    <owl-carousel-o [options]="skillsOptions">
+        <ng-template carouselSlide *ngFor="let skill of skills">
+            <div class="skill">
+                <img src="../../../assets/img/{{ skill.img }}" />
+                <h5>{{ skill.name }}</h5>
+                <div class="rate">
+                    <i class="fa fa-star skill-rate" aria-hidden="true" *ngFor="let star of Arr(skill.rate).fill(1)"></i>
+                    <i class="fa fa-star" aria-hidden="true" *ngFor="let star of Arr(5-skill.rate).fill(1)"></i>
                 </div>
-            </ng-template>
-        </owl-carousel-o>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
 </div>

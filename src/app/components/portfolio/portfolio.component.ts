@@ -16,6 +16,7 @@ export class PortfolioComponent implements OnInit {
     autoplay: true,
     autoplayTimeout: 3500,
     autoplayHoverPause:true,
+    autoplayMouseleaveTimeout: 500,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -47,5 +48,4 @@ export class PortfolioComponent implements OnInit {
   ngOnInit(): void {
     this.projects = this.projectService.getProjects();
   }
-
 }
