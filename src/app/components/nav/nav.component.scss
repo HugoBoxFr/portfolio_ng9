@@ -68,6 +68,10 @@ nav.sticky {
     background-color: #026ada;
 }
 
+.modal-footer {
+    padding-bottom: 0;
+}
+
 .navbar-nav a.active, .navbar-nav a:hover {
     color: #007bff;
     position: relative;
@@ -84,6 +88,23 @@ nav.sticky {
 
 .ng-invalid.ng-touched {
     border-color: red;
+}
+
+.messageSend, .messageNotSend {
+    margin-top: 10px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.messageSend {
+    border: 2px solid rgb(27, 211, 27);
+    color: rgb(21, 182, 21);
+}
+
+.messageNotSend {
+    border: 2px solid rgb(240, 23, 23);
+    color: rgb(182, 21, 21);
 }
 
 @media screen and (max-width: 800px) {

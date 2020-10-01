@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, NgForm } from '@angular/forms';
+import { FormControl, NgForm, Validators } from '@angular/forms';
 import * as $ from "jquery";
-import { FormGroup, FormBuilder } from'@angular/forms';
+import { FormGroup } from'@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 window.addEventListener("scroll", function() {
@@ -58,14 +58,16 @@ $(document).ready(function() {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  formValid: boolean = false;
+  formInvalid: boolean = false;
+
   formMail = new FormGroup({
-    name: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl('')
+    name: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required]),
+    message: new FormControl('', [Validators.required])
   });
 
   constructor(
-    private fb: FormBuilder,
     private http: HttpClient
   ) { }
 
@@ -78,15 +80,14 @@ export class NavComponent implements OnInit {
   }
 
   onSubmit() {
+    const closeBtn = document.getElementById('close-btn');    
     const body = new HttpParams()
     .set('form-name', 'contact')
     .append('name', this.formMail.value.name)
     .append('email', this.formMail.value.email)
     .append('message', this.formMail.value.message)
     this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
-      res => {
-        console.log('ok')
-      },
+      res => {},
       err => {
         if (err instanceof ErrorEvent) {
           //client side error
@@ -95,9 +96,16 @@ export class NavComponent implements OnInit {
         } else {
           //backend error. If status is 200, then the message successfully sent
           if (err.status === 200) {
-            alert("Your message has been sent!");
+            this.formValid = true;
+            setTimeout(() => {
+              closeBtn.dataset.dismiss = 'modal';
+              this.formValid = false;
+            }, 2000);
           } else {
-            alert("Something went wrong when sending your message.");
+            this.formInvalid = true;
+            setTimeout(() => {
+              this.formInvalid = false;
+            }, 2000);
             console.log('Error status:');
             console.log(err.status);
             console.log('Error body:');
