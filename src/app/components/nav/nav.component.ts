@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, NgForm } from '@angular/forms';
 import * as $ from "jquery";
 import { FormGroup, FormBuilder } from'@angular/forms';
 import { HttpClient, HttpParams } from '@angular/common/http';
@@ -58,7 +58,11 @@ $(document).ready(function() {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
-  formMail: FormGroup;
+  formMail = new FormGroup({
+    name: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl('')
+  });
 
   constructor(
     private fb: FormBuilder,
@@ -66,7 +70,6 @@ export class NavComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.initializeForm();
   }
 
   hideNav() {
@@ -74,27 +77,34 @@ export class NavComponent implements OnInit {
     navContent.classList.remove('show');
   }
 
-  initializeForm(): void {
-    this.formMail = this.fb.group({
-      name: '',
-      email: '',
-      message: ''
-    });
-  }
-
-  onSubmit():void {
+  onSubmit() {
     const body = new HttpParams()
-      .set('form-name', 'contact')
-      .append('name', this.formMail.value.name)
-      .append('email', this.formMail.value.email)
-      .append('message', this.formMail.value.message);
-      this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
-        res => {
-          console.log('test', res)
-          setTimeout(() => {
-            this.formMail.reset();
-          }, 1000);
-        }
-      );
-  }
+    .set('form-name', 'contact')
+    .append('name', this.formMail.value.name)
+    .append('email', this.formMail.value.email)
+    .append('message', this.formMail.value.message)
+    this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
+      res => {
+        console.log('ok')
+      },
+      err => {
+        if (err instanceof ErrorEvent) {
+          //client side error
+          alert("Something went wrong when sending your message.");
+          console.log(err.error.message);
+        } else {
+          //backend error. If status is 200, then the message successfully sent
+          if (err.status === 200) {
+            alert("Your message has been sent!");
+          } else {
+            alert("Something went wrong when sending your message.");
+            console.log('Error status:');
+            console.log(err.status);
+            console.log('Error body:');
+            console.log(err.error);
+          };
+        };
+      }
+    );
+  };
 }

@@ -37,7 +37,7 @@
             </div>
 
             <div class="modal-body">
-                <form name="contact" method="POST" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
+                <form name="contact" method="post" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
                     <input type="hidden" name="form-name" value="contact" />
                     <p style='display: none;'>
                         <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
