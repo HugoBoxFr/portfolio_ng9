@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import * as $ from "jquery";
+import { FormGroup, FormBuilder } from'@angular/forms';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 window.addEventListener("scroll", function() {
   const nav = document.getElementById('menu');
@@ -55,10 +58,15 @@ $(document).ready(function() {
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  formMail: FormGroup;
+  http: HttpClient;
 
-  constructor() { }
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.initializeForm();
   }
 
   hideNav() {
@@ -66,4 +74,29 @@ export class NavComponent implements OnInit {
     navContent.classList.remove('show');
   }
 
+  initializeForm(): void {
+    this.formMail = this.fb.group({
+      name: '',
+      email: '',
+      message: ''
+    });
+  }
+
+  onSubmit():void {
+    console.log(this.formMail);
+    const body = new HttpParams()
+      .set('form-name', 'contact')
+      .append('name', this.formMail.value.name)
+      .append('email', this.formMail.value.email)
+      .append('message', this.formMail.value.message);
+      this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
+        res => {
+          console.log(res)
+        }
+      );
+  }
+
+
+
+ 
 }

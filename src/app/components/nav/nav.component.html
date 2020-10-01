@@ -37,19 +37,22 @@
             </div>
 
             <div class="modal-body">
-                <form action="POST" data-netlify="true">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required>
+                <form name="contact" netlify method="POST" netlify-honeypot="bot-field" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required formControlName="name">
 
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Votre email" required>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Votre email" required formControlName="email">
 
-                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Votre message" required></textarea>
+                    <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Votre message" required formControlName="message"></textarea>
+
+                    <div class="modal-footer">
+                        <div data-netlify-recaptcha="true"></div>
+                        <!-- <button [disabled]="formulaire.invalid" type="submit" class="btn-in-modal" (click)="send(formulaire)" [style.cursor]="formulaire.invalid ? 'not-allowed' : 'pointer'">Envoyer</button> -->
+                        <button [disabled]="formulaire.invalid" type="submit" class="btn-in-modal" [style.cursor]="formulaire.invalid ? 'not-allowed' : 'pointer'">Envoyer</button>
+
+                    </div>
                 </form>
             </div>
 
-            <div class="modal-footer">
-                <div data-netlify-recaptcha="true"></div>
-                <button type="submit" class="btn-in-modal">Envoyer</button>
-            </div>
         </div>
     </div>
 </div>

@@ -82,6 +82,10 @@ nav.sticky {
     margin-bottom: 5px;
 }
 
+.ng-invalid.ng-touched {
+    border-color: red;
+}
+
 @media screen and (max-width: 800px) {
     nav, .navbar-brand {
         font-size: .8rem;

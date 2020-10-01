@@ -21,6 +21,7 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { ResumeComponent } from './components/resume/resume.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,9 @@ import { RecommendationComponent } from './components/recommendation/recommendat
     BrowserModule,
     AppRoutingModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
