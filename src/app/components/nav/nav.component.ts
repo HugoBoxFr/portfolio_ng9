@@ -100,6 +100,7 @@ export class NavComponent implements OnInit {
             setTimeout(() => {
               closeBtn.dataset.dismiss = 'modal';
               this.formValid = false;
+              this.formMail.reset();
             }, 2000);
           } else {
             this.formInvalid = true;
