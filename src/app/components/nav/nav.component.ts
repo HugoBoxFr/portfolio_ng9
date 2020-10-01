@@ -63,10 +63,10 @@ $('#submitForm').on('click',function(){
 })
 export class NavComponent implements OnInit {
   formMail: FormGroup;
-  http: HttpClient;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private http: HttpClient
   ) { }
 
   ngOnInit(): void {

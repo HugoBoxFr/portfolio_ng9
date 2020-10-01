@@ -22,6 +22,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { QuoteComponent } from './components/quote/quote.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CarouselModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -37,7 +37,7 @@
             </div>
 
             <div class="modal-body">
-                <!-- <form name="contact" action="post" method="POST" data-netlify="true" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
+                <form name="contact" method="POST" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
                     <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required formControlName="name">
                     <input type="hidden" name="form-name" value="contact" />
 
@@ -49,15 +49,6 @@
                         <div data-netlify-recaptcha="true"></div>
                         <button [disabled]="formulaire.invalid" type="submit" class="btn-in-modal" [style.cursor]="formulaire.invalid ? 'not-allowed' : 'pointer'">Envoyer</button>
 
-                    </div>
-                </form> -->
-
-                <form id="contact-form" name="contact" method="POST" data-netlify="true">
-                    <input type="text" name="name" class="form-control" />
-                    <input type="email" name="email" class="form-control" />
-                    <textarea name="message" class="form-control"></textarea>
-                    <div class="modal-footer">
-                        <button id="submitForm" type="submit"  class="btn-in-modal">Envoyer</button>
                     </div>
                 </form>
             </div>
