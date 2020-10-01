@@ -51,10 +51,6 @@ $(document).ready(function() {
   })
 });
 
-$('#submitForm').on('click',function(){
-  $( '#contact-form' ).submit();
-});
-
 
 @Component({
   selector: 'app-nav',
@@ -101,8 +97,4 @@ export class NavComponent implements OnInit {
         }
       );
   }
-
-
-
- 
 }
