@@ -37,7 +37,7 @@
             </div>
 
             <div class="modal-body">
-                <form name="contact" netlify method="POST" netlify-honeypot="bot-field" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
+                <form name="contact" method="post" [formGroup]="formMail" #formulaire="ngForm" (ngSubmit)="onSubmit()">
                     <input type="text" id="name" name="name" class="form-control" placeholder="Votre nom" required formControlName="name">
 
                     <input type="email" id="email" name="email" class="form-control" placeholder="Votre email" required formControlName="email">
