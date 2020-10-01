@@ -90,7 +90,7 @@ export class NavComponent implements OnInit {
       .append('message', this.formMail.value.message);
       this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
         res => {
-          console.log(res)
+          console.log('test', res)
           setTimeout(() => {
             this.formMail.reset();
           }, 1000);
