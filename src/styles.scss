@@ -25,3 +25,7 @@ body.modal-open {
     display: inline-block;
 }
 
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: orange;
+}
+

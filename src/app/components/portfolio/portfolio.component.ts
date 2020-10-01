@@ -15,6 +15,7 @@ export class PortfolioComponent implements OnInit {
     loop: true,
     autoplay: true,
     autoplayTimeout: 3500,
+    autoplayHoverPause:true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,

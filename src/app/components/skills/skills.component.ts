@@ -3,6 +3,7 @@ import { Skill } from 'src/app/models/skill';
 import { SkillService } from 'src/app/services/skill.service';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
+
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -20,7 +21,7 @@ export class SkillsComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     margin: 15,
-    dots: false,
+    dots: true,
     navSpeed: 700,
     navText: ['<', '>'],
     responsive: {
