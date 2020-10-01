@@ -51,6 +51,10 @@ $(document).ready(function() {
   })
 });
 
+$('#submitForm').on('click',function(){
+  $( '#contact-form' ).submit();
+});
+
 
 @Component({
   selector: 'app-nav',
@@ -83,13 +87,12 @@ export class NavComponent implements OnInit {
   }
 
   onSubmit():void {
-    console.log(this.formMail);
     const body = new HttpParams()
       .set('form-name', 'contact')
       .append('name', this.formMail.value.name)
       .append('email', this.formMail.value.email)
       .append('message', this.formMail.value.message);
-      this.http.post('/', body.toString(), {headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
+      this.http.post('/', body.toString(), { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}).subscribe(
         res => {
           console.log(res)
           setTimeout(() => {
