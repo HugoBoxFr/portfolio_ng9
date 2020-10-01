@@ -37,3 +37,11 @@
     }
 
 }
+
+@media screen and (max-width: 500px) {
+    #resume {
+        .btn-to-cv {
+            justify-content: center;
+        }
+    }
+}

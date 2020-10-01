@@ -84,4 +84,18 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    #xp {
+        h4 {
+            font-size: 20px;
+        }
+
+        .xp-content {
+            h5 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
     

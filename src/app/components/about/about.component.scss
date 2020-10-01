@@ -1,7 +1,6 @@
 #about {
     padding-top: 80px;
     padding-bottom: 80px;
-    // color: white;
 }
 
 #about h3 {
@@ -41,6 +40,12 @@
             margin-right: 5px;
             text-align: center;
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #about h3 {
+        font-size: 20px;
     }
 }
 
