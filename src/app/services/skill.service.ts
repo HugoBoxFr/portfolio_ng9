@@ -11,7 +11,7 @@ export class SkillService {
     this.skills = [
       new Skill(1, "Angular 9", 4, "angular-icon.svg"),
       new Skill(2, "NodeJs", 3, "nodejs.svg"),
-      new Skill(3, "ReactJs", 3, "react.svg"),
+      new Skill(3, "ReactJs", 2, "react.svg"),
       new Skill(4, "Typescript", 4, "typescript.svg"),
       new Skill(5, "Javascript", 3, "javascript.svg"),
       new Skill(6, "Php", 2, "php.svg"),
