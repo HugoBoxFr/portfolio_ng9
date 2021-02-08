@@ -8,7 +8,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './components/home/home.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ProjectComponent } from './components/project/project.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -32,7 +31,6 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     ContactComponent,
     AboutComponent,
-    HomeComponent,
     PortfolioComponent,
     ProjectComponent,
     FormationsComponent,
